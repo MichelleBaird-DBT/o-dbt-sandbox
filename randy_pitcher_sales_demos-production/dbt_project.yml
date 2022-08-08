@@ -1,0 +1,28 @@
+config-version: 2
+
+name: 'acme'
+version: '1.0.0'
+
+models:
+  acme:
+    +materialized: view
+
+    retail:
+      +tags: 
+        - retail
+        - hourly
+      marts:
+        +materialized: table
+
+    hello_world:
+      +tags: 
+        - hello_world
+        - daily
+
+    utils:
+      +tags: 
+        - utils
+        - daily
+
+
+        
